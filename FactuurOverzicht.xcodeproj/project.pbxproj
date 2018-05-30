@@ -13,6 +13,8 @@
 		73C28D6F20BE081E00BA4C2D /* FactuurOverzicht.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73C28D6D20BE081E00BA4C2D /* FactuurOverzicht.xcdatamodeld */; };
 		73C28D7120BE081E00BA4C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C28D7020BE081E00BA4C2D /* Assets.xcassets */; };
 		73C28D7420BE081E00BA4C2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C28D7220BE081E00BA4C2D /* LaunchScreen.storyboard */; };
+		73C28D7C20BE14C200BA4C2D /* FactuurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C28D7B20BE14C200BA4C2D /* FactuurViewController.swift */; };
+		73C28D7E20BE171A00BA4C2D /* Iconsmind-Outline-File-Upload.ico in Resources */ = {isa = PBXBuildFile; fileRef = 73C28D7D20BE171A00BA4C2D /* Iconsmind-Outline-File-Upload.ico */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		73C28D7020BE081E00BA4C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73C28D7320BE081E00BA4C2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73C28D7520BE081E00BA4C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73C28D7B20BE14C200BA4C2D /* FactuurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactuurViewController.swift; sourceTree = "<group>"; };
+		73C28D7D20BE171A00BA4C2D /* Iconsmind-Outline-File-Upload.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = "Iconsmind-Outline-File-Upload.ico"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		73C28D6520BE081E00BA4C2D /* FactuurOverzicht */ = {
 			isa = PBXGroup;
 			children = (
+				73C28D7D20BE171A00BA4C2D /* Iconsmind-Outline-File-Upload.ico */,
 				73C28D6620BE081E00BA4C2D /* AppDelegate.swift */,
 				73C28D6820BE081E00BA4C2D /* ViewController.swift */,
 				73C28D6A20BE081E00BA4C2D /* Main.storyboard */,
+				73C28D7B20BE14C200BA4C2D /* FactuurViewController.swift */,
 				73C28D7020BE081E00BA4C2D /* Assets.xcassets */,
 				73C28D7220BE081E00BA4C2D /* LaunchScreen.storyboard */,
 				73C28D7520BE081E00BA4C2D /* Info.plist */,
@@ -128,6 +134,7 @@
 			files = (
 				73C28D7420BE081E00BA4C2D /* LaunchScreen.storyboard in Resources */,
 				73C28D7120BE081E00BA4C2D /* Assets.xcassets in Resources */,
+				73C28D7E20BE171A00BA4C2D /* Iconsmind-Outline-File-Upload.ico in Resources */,
 				73C28D6C20BE081E00BA4C2D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +149,7 @@
 				73C28D6F20BE081E00BA4C2D /* FactuurOverzicht.xcdatamodeld in Sources */,
 				73C28D6920BE081E00BA4C2D /* ViewController.swift in Sources */,
 				73C28D6720BE081E00BA4C2D /* AppDelegate.swift in Sources */,
+				73C28D7C20BE14C200BA4C2D /* FactuurViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

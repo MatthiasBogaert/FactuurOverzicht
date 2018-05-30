@@ -1,24 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m91-ga-12y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Nieuwe factuur-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FactuurViewController" customModule="FactuurOverzicht" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Factuurnaam" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ZZ-Ii-V8t">
+                                <rect key="frame" x="36" y="94" width="302" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UPF-5u-Aas"/>
+                                    <constraint firstAttribute="width" constant="220" id="XB4-Q2-hig"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fx6-sf-aTr">
+                                <rect key="frame" x="111.5" y="432" width="151" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZID-hj-wir">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="50"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Klant" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lqH-7q-99e">
+                                <rect key="frame" x="36" y="149" width="302" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1a3-jF-dWa"/>
+                                    <constraint firstAttribute="width" constant="220" id="lZl-xr-Vfz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bedrag" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BmD-df-btJ">
+                                <rect key="frame" x="77" y="204" width="220" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5XM-ST-jbq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="302" id="JOX-0P-vzl"/>
+                                    <constraint firstAttribute="width" constant="220" id="mqX-Jm-obq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Factuurdatum" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zle-j0-zfE">
+                                <rect key="frame" x="77" y="259" width="220" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="2EL-NL-C2z"/>
+                                    <constraint firstAttribute="height" constant="40" id="cuW-s7-zg4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Vervaldatum" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zyb-qB-73p">
+                                <rect key="frame" x="77" y="314" width="220" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0vh-C6-oYA"/>
+                                    <constraint firstAttribute="width" constant="220" id="WSD-zA-lhx"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betaald?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mX0-T6-2Qd">
+                                <rect key="frame" x="100" y="381" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Dqf-eO-5WH"/>
+                                    <constraint firstAttribute="width" constant="100" id="Y05-73-LRo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vq9-gg-WMm">
+                                <rect key="frame" x="228" y="383" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="KtB-1I-QIs"/>
+                                    <constraint firstAttribute="width" constant="47" id="zLL-RR-5H4"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20540767909999999" green="0.8636983037" blue="0.63410210609999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="onTintColor" red="0.20540767909999999" green="0.8636983037" blue="0.63410210609999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-bn-pvW">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.20540767909999999" green="0.8636983037" blue="0.63410210609999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hbr-8f-ajv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" red="0.20540767909999999" green="0.8636983037" blue="0.63410210609999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Voeg factuur toe">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Iconsmind-Outline-File-Upload.ico" translatesAutoresizingMaskIntoConstraints="NO" id="9JS-Pf-tve">
+                                <rect key="frame" x="134" y="455" width="106" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="9HD-mw-9Jh"/>
+                                    <constraint firstAttribute="height" constant="106" id="cLJ-ln-zMm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14166375989999999" green="0.23040890689999999" blue="0.29290649289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vq9-gg-WMm" firstAttribute="top" secondItem="Zyb-qB-73p" secondAttribute="bottom" constant="29" id="1ly-1w-xyh"/>
+                            <constraint firstItem="Zyb-qB-73p" firstAttribute="top" secondItem="zle-j0-zfE" secondAttribute="bottom" constant="15" id="4RB-4B-bCy"/>
+                            <constraint firstItem="fx6-sf-aTr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="76s-W1-0Dg"/>
+                            <constraint firstItem="mX0-T6-2Qd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="7vY-M8-QRQ"/>
+                            <constraint firstItem="mX0-T6-2Qd" firstAttribute="top" secondItem="Zyb-qB-73p" secondAttribute="bottom" constant="27" id="BlL-S4-5Tr"/>
+                            <constraint firstItem="9JS-Pf-tve" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DLa-Xd-hdA"/>
+                            <constraint firstItem="9JS-Pf-tve" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="391" id="Fms-Vh-5oi"/>
+                            <constraint firstItem="5ZZ-Ii-V8t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IMT-Eg-2Je"/>
+                            <constraint firstItem="pfh-bn-pvW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KVc-l8-PmJ"/>
+                            <constraint firstItem="pfh-bn-pvW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Knm-EP-OHN"/>
+                            <constraint firstItem="BmD-df-btJ" firstAttribute="top" secondItem="lqH-7q-99e" secondAttribute="bottom" constant="15" id="PbC-id-ayP"/>
+                            <constraint firstItem="zle-j0-zfE" firstAttribute="top" secondItem="BmD-df-btJ" secondAttribute="bottom" constant="15" id="Q9E-sq-mbr"/>
+                            <constraint firstItem="lqH-7q-99e" firstAttribute="top" secondItem="5ZZ-Ii-V8t" secondAttribute="bottom" constant="15" id="ZET-Nq-rhO"/>
+                            <constraint firstItem="5ZZ-Ii-V8t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="eg1-bx-kzL"/>
+                            <constraint firstItem="mX0-T6-2Qd" firstAttribute="top" secondItem="Zyb-qB-73p" secondAttribute="bottom" constant="27" id="f1m-dO-XZx"/>
+                            <constraint firstItem="ZID-hj-wir" firstAttribute="top" secondItem="Zyb-qB-73p" secondAttribute="bottom" constant="78" id="fVi-JW-y1z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pfh-bn-pvW" secondAttribute="trailing" id="hbM-tn-CbS"/>
+                            <constraint firstItem="pfh-bn-pvW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="n8P-R8-Yip"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vq9-gg-WMm" secondAttribute="trailing" constant="100" id="qBU-Ja-VJ2"/>
+                            <constraint firstItem="lqH-7q-99e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sfS-NB-UNf"/>
+                            <constraint firstItem="BmD-df-btJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t4e-sL-m7A"/>
+                            <constraint firstItem="Zyb-qB-73p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v80-xR-zYN"/>
+                            <constraint firstItem="zle-j0-zfE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x0J-Ol-yFL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Nieuwe factuur" id="QXf-6Z-6sy">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="SGc-9B-deX">
+                                <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="CameraTapped:" destination="BYZ-38-t0r" id="eXk-om-4Z2"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Foto's" id="N1n-Nh-a3b">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="FotosTapped:" destination="BYZ-38-t0r" id="Hr4-vm-wBP"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Titel" destination="5ZZ-Ii-V8t" id="psz-pv-jvI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lpr-vY-MK2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m91-ga-12y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OCl-jE-08l">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.94116216900000005" green="0.80470079179999998" blue="0.34787017110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="evh-gs-hSY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EkH-I6-NWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Iconsmind-Outline-File-Upload.ico" width="256" height="256"/>
+    </resources>
 </document>
